@@ -40,3 +40,42 @@ end
 
 puts NumberStuff.random
 puts LetterStuff.random
+
+module ToolBox
+  class Ruler
+    attr_accessor :length
+  end
+end
+
+module Country
+  class Ruler
+    attr_accessor :name
+  end
+end
+
+a = ToolBox::Ruler.new
+a.length = 50
+b = Country::Ruler.new
+b.name = "Napoleon I"
+
+module UsefulFeatures
+  def class_name
+    self.class.to_s
+  end
+end
+
+class Person
+  include UsefulFeatures
+end
+
+x = Person.new
+puts x.class_name
+
+module AnotherModule
+  def do_stuff
+    puts "This is a test"
+  end
+end
+
+include AnotherModule
+do_stuff
