@@ -70,3 +70,5 @@ my_dungeon.add_room(:largecave, "Large Cave", "a large cavernous cave", {:west =
 my_dungeon.add_room(:smallcave, "Small Cave", "a small claustrophobic cave", {:east => :largecave})
 
 my_dungeon.start(:largecave)
+my_dungeon.go(:west)
+my_dungeon.go(:east)
